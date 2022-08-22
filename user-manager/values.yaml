@@ -107,6 +107,6 @@ postgresql:
       primary:
         persistence:
           enabled: true
-          existingClaim: "pg-pv-claim"
+          existingClaim: "postgres-data-pvc"
       volumePermissions:
         enabled: true
