@@ -5,10 +5,10 @@
 replicaCount: 2
 
 image:
-  repository: yassinechamkhi/target-onboarding-assignment
+  repository: yassinechamkhi/go-rest-api-user-manager
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "0.0.2"
+  tag: "0.0.1"
   
 
 imagePullSecrets: []
@@ -87,11 +87,11 @@ affinity: {}
 dbconfig: 
   database-host: postgresql-hl
   database-port: 5432
-  database-name: onboardingdb
+  database-name: usermanagerdb
 
 secrets:
   type: Opaque
-  postgres-username: yassine_target
+  postgres-username: yassine_ch
   postgres-password: yassine_pwd123
 
 postgresql:
@@ -101,9 +101,9 @@ postgresql:
       auth:
         enablePostgresUser: true
         postgresPassword: "testpassword"
-        username: "yassine_target"
+        username: "yassine_ch"
         password: "yassine_pwd123"
-        database: "onboardingdb"
+        database: "usermanagerdb"
       primary:
         persistence:
           enabled: true
